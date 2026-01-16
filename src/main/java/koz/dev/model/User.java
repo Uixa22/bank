@@ -1,0 +1,46 @@
+package koz.dev.model;
+
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+public class User {
+    private final int id;
+    private final String login;
+    private List<Account> accountList;
+
+    public User(int id, String login, List<Account> accountList) {
+        this.id = id;
+        this.login = login;
+        this.accountList=accountList;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", accountList=" + accountList +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public List<Account> getAccountList() {
+        return accountList;
+    }
+
+}
+
+
+
